@@ -1,0 +1,249 @@
+body {
+    /* font-family: 'Open Sans', Helvetica, Arial, sans-serif; */
+    font-size: 20px;
+    font-weight: 300;
+    overflow-x: hidden;
+    width: 100%;
+    line-height: 1.5;
+    color: #373a3c;
+    background-color: #fff;
+    margin: 0;
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+    display: block;
+}
+#up {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin-right: 25px;
+    margin-bottom: 10px;
+    display: none;
+}
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 100px;
+}
+.left-side{
+    min-height: 110px;
+    max-height: auto;
+    width: 50%;
+    padding-right: 30px;
+}
+.right-side{
+    width: 50%;
+}
+.example-gal{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 20%;
+}
+.example-gal img{
+   display: flex;
+   transition: 1s; /* Время эффекта */
+   padding-right: 30px;
+   padding-left: 30px;
+   /* flex-direction: row; */
+}
+.padding-right{
+    padding-right: 1.25%;
+}
+.padding-left{
+    padding-left: 1.25%;
+}
+.example-cl{
+    padding-bottom: 400px;
+}
+.example-gal img:hover {
+    transform: scale(2.2); /* Увеличиваем масштаб */
+   }
+/* .text-in-block{
+    width: 940px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+} */
+.text-right{
+    float: right;
+    width: 66.666667%;
+}
+
+.img-fluid{
+    max-width: 100%;
+    height: auto;
+}
+li{
+    list-style: none;
+
+}
+li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Gilroy-Bold';
+    font-size: 36px;
+    Line-height: 21.83px;
+    transition: .3s;
+}
+li button{
+    background:#006599;
+    border: 0;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Gilroy-Bold';
+    font-size: 36px;
+    Line-height: 21.83px;
+    transition: .3s;
+}
+div{
+    display: block;
+}
+img{
+    min-height: 110px;
+}
+.right-row{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box  ;
+    padding: 40px;
+}
+.left-row{
+    background-color: #006599;
+    border: none;
+    color: white;
+    box-sizing: inherit;
+    -webkit-box-sizing: inherit;
+    width: 100%;
+}
+
+.logo-div{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.section-class{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+section{
+    height:max-content;
+}
+.text-center{
+    text-align: center!important;
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+.main-nav{
+    display: none;
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+.main-nav-ul{
+    display: inline-block;
+    padding-left: 0;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+@media (min-width: 576px) {
+    .container{
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .about-img-container { margin-top: 0; }
+}
+
+@media (min-width: 992px) {
+    .container{
+        width: 100%;
+    }
+
+    .section-class { 
+        margin-bottom: 100px; 
+    }
+
+    .right-row{
+        float: right;
+        max-width: 70%;
+        width: 70%;
+        padding: 80px 40px 30px 80px;
+        right: 0;
+    }
+
+	.left-row{
+        left: 0;
+        height: 100%;
+        position: fixed;
+        width: 30%;
+    }
+
+    .site-name{
+        font-size: 2.6rem;
+        margin-top:30px;
+    }
+
+    .logo-div{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .section-class{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .main-nav{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .nav-item-link{
+        cursor: pointer;
+        font-size: 2.4rem;
+        list-style: none;
+        padding: 18px 30px;
+        transition: 0.3s ease;
+        display: list-item;
+        text-align: center;
+    }
+
+    
+
+}
+
+@media (min-width: 1500px){
+    .container{
+        width: 100%;
+    }
+}
+
+@media (max-height: 860px) {
+	
+}
+
+@media (min-height: 859px) {
+	.logo-div{
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .tm-nav-item-link{
+        font-size: 1.9rem;
+    }
+
+    .section-class{
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+}
