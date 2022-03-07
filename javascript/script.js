@@ -1,3 +1,17 @@
+function getWeekNumber(date){
+    return Math.ceil(date.getDate()/7);
+}
+
+function getDayOfWeek(date){
+    let dayString = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"]
+    return dayString[date.getDay()];
+}
+
+function getMonthOfYear(date){
+    let monthString = ["Января ", "Февраля ", "Марта ", "Апреля ", "Мая ", "Июня", "Июля", "Августа ", "Сентября ", "Октября ", "Ноября", "Декабря "]
+    return monthString[date.getMonth()];
+}
+
 function rightDate(date){
     let arrayOfStrings = date.split(".");
     let errorNumber = 0;
@@ -25,7 +39,6 @@ function rightDate(date){
         errorNumber = 4;
         return errorNumber;
     }
-
     switch(+arrayOfStrings[0]){ //проверка количество дней
         case 1:
         case 3:
@@ -34,10 +47,8 @@ function rightDate(date){
         case 8:
         case 10:
         case 12:
-            console.log("huy1")
             if(arrayOfStrings[1]>31){
                 errorNumber = 5;
-                console.log("хуй2")
                 return errorNumber;
             }
             break;
@@ -85,14 +96,12 @@ function which_date(date){
 
     let convertedValue = convertFromString(date);
     // convertFromString(date);
-    let options = {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric',
-        weekday: 'long'
+    let options_year = {
+        year: 'numeric'
     };
+    let weekdays = ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб']
     if(convertedValue instanceof Date){
-        alert(convertedValue.toLocaleString("ru", options));
+        alert(getDayOfWeek(convertedValue)+", "+getWeekNumber(convertedValue)+" неделя "+getMonthOfYear(convertedValue)+" "+ convertedValue.toLocaleString("ru", options_year)+" года."); //(weekName+convertedValue.toLocaleString("ru", options))
     }
     else
     switch(convertedValue){
